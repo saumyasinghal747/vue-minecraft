@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h2>{{debug}}</h2>
   <Renderer shadow ref="renderer" antialias resize="window" >
     <PerspectiveCamera ref="camera"  :position="{ z: 100, x:0, y:0 }" />
     <Scene :background="'#9adcf1'" ref="scene">
@@ -52,21 +51,22 @@ export default {
     document.addEventListener('mousemove', e => {
       if (document.pointerLockElement) {
         camera.rotation.y -= e.movementX / 700;
-
+          /*this.debug.camz = camera.rotation.z
           this.debug.y = (camera.rotation.y % (Math.PI*2))*180/Math.PI + 90
         this.debug.x = (camera.rotation.x % (Math.PI*2))*180/Math.PI - 90
-        //this.debug.camx = camera.rotation.x
+        this.debug.camx = camera.rotation.x*/
         if (this.debug.y < 180 && this.debug.y > 0) {
           this.debug.rot = 'back';
           camera.rotation.x -= e.movementY / 700; // this part is good
-          if (this.debug.x < 0) camera.rotation.x = Math.PI / 2;
-          else if (camera.rotation.x > Math.PI ) camera.rotation.x = Math.PI;
+          //if (this.camera.rotation.x < 0) camera.rotation.x = 0;
+          //else if (camera.rotation.x > Math.PI ) camera.rotation.x = Math.PI;
         }
         else {
           this.debug.rot = 'front'
           camera.rotation.x += e.movementY / 700; // this part is good
-          if (camera.rotation.x > Math.PI / 2) camera.rotation.x = Math.PI / 2; //good
-          else if (camera.rotation.x < -Math.PI / 2) camera.rotation.x = -Math.PI / 2; //good
+          if (camera.rotation.x > Math.PI) camera.rotation.x = Math.PI; //good
+          if (camera.rotation.x < 0) camera.rotation.x = 0;
+          //else if (camera.rotation.x < -Math.PI / 2) camera.rotation.x = -Math.PI / 2; //good
 
         }
       }

@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from './../views/Home.vue'
 import World from './../views/World.vue'
 const routes = [
@@ -14,7 +14,7 @@ const routes = [
     },
 ]
 const router = createRouter({
-    history: createWebHashHistory('/vue-minecraft/'),
+    history: createWebHashHistory(import.meta.env.BASE_URL),
     mode:'hash',
     routes,
 })

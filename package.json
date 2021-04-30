@@ -12,6 +12,7 @@
     "troisjs": "^0.2.3",
     "vue": "^3.0.11",
     "vue-router": "4.0.0-alpha.11",
+    "vuetify": "^2.4.11",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
@@ -19,6 +20,10 @@
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.11",
+    "deepmerge": "^4.2.2",
+    "less": "^4.1.1",
+    "sass": "^1.32.12",
+    "sass-loader": "^11.0.1",
     "vite": "^2.1.5"
   }
 }

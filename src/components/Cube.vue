@@ -2,7 +2,7 @@
   <Mesh cast-shadow :position="realPosition">
     <BoxGeometry ref="box" :size="SIZE"/>
     <LambertMaterial>
-      <Texture :magFilter="NearestFilter" ref="cubeTexture" :src="`/textures/${type}.${FTYPES[type]}`"/>
+      <Texture :magFilter="NearestFilter" ref="cubeTexture" :src="`./textures/${type}.${FTYPES[type]}`"/>
     </LambertMaterial>
   </Mesh>
 </template>

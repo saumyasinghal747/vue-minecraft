@@ -3,7 +3,7 @@
     <PlaneGeometry ref="groundPlane" :width="500" :height="500"/>
 
     <BasicMaterial :side="DoubleSide">
-      <Texture :magFilter="NearestFilter" ref="grassTexture" src="/textures/grass.jpeg"/>
+      <Texture :magFilter="NearestFilter" ref="grassTexture" src="./textures/grass.jpeg"/>
     </BasicMaterial>
   </Mesh>
 
